@@ -28,14 +28,26 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+A: .forEach() loops through the entire array and does not create a new array.
+A: .map() runs through the entire array enabling us to manipulate the data and storing it in a new array, original array remains unchanged.
 
 2. Explain the difference between a callback and a higher order function.
+A: Callback functions pass into other functions as an argument to be called back at a later time.
+A: Higher Order functions take other functions as an argument.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
+A: This happens when a inner function calls to the outer scope for a value.
+A: The variable must be outside a loop to prevent being reset back to zero during a loop.
 
 4. Describe the four principles of the 'this' keyword.
+A: Explicit Binding: Where 'this' keyword is told what method it should be using. .call(), .apply(), and .bind()
+A: Implicit Binding: Object Methods, 'this' keyword refers to the object that is left of the dot.
+A: New Binding: When invoking a new function the 'this' keyword in that function is bound to the new object.
+A: Window Binding: When 'this' keyword isn't given context and returns the global or window object in a browser.
 
 5. Why do we need super() in an extended class?
+A: While extend does just that it extends a new class from the parent class.
+   We need super to call the constructor of the parent class so we can have access to the parents properties and methods.   
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
