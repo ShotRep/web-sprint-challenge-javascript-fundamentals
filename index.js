@@ -152,9 +152,13 @@ lowPopulationAnimals(zooAnimals);
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-function USApop(/*Your Code Here*/) {
-  /*Your Code Here*/
+function USApop(data) {
+  const totalPop = data.reduce(function (accumulator, item) {
+    return accumulator + item.population;
+  }, 0);
+  return totalPop;
 }
+USApop(zooAnimals);
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
 /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
