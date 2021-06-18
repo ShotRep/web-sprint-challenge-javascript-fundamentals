@@ -156,6 +156,7 @@ function USApop(data) {
   const totalPop = data.reduce(function (accumulator, item) {
     return accumulator + item.population;
   }, 0);
+
   return totalPop;
 }
 USApop(zooAnimals);
@@ -168,28 +169,35 @@ USApop(zooAnimals);
  * The consume function should return the invocation of cb, passing a and b into cb as arguments
  */
 
-function consume(/*Your Code Here */) {
+function consume(a, b, addCB) {
   /*Your Code Here */
+  return addCB(a, b);
 }
+consume(1, 2, add);
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
 
-function add(/*Your Code Here */) {
+function add(a, b) {
   /*Your Code Here*/
+  return a + b;
 }
+add(1, 2);
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
 
-function multiply(/*Your Code Here */) {
+function multiply(a, b) {
   /*Your Code Here */
+  return a * b;
 }
+multiply(1, 2);
 
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
-function greeting(/*Your Code Here */) {
-  return; /*Your Code Here */
+function greeting(first, last) {
+  return `Hello ${first} ${last}, nice to meet you!`;
 }
+greeting("lars", "ulrich");
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
